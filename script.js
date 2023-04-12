@@ -16,3 +16,7 @@ const typed = new Typed('.typed', {
   showCursor: true,
   cursorChar: '_'
 });
+
+
+// Botón copiar
+

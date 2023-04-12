@@ -13,43 +13,45 @@
 </head>
 
 <body>
-<div class="container">
   <main class="card">
-    <div class="card-top">
-      <img src="img/Vector@2x.svg" alt="Logo alura" class="aluraLat">
+  <div class="top-card">
+    <img src="img/Vector@2x.svg" alt="Logo alura" id="aluraLat">
+    <div class="toggle">
+    <input type="checkbox" id="toggle" />
+    <label for="toggle"></label>
     </div>
-    <div class="card-main">
-      <div class="card-left">
-        <div class="left-title">
-          <i class="fa-solid fa-eye"></i>
-          <h2 class="cript-title"><span class="typed"></span> todo lo que quieras</h1>       
-        </div>
-        <div class="left-main">
-          <textarea placeholder="Ingresa el texto que deseas encriptar o desencriptar"></textarea>
-          <button class="btn-desenc"><i class="fa-solid fa-lock-open"></i><span> Desencriptar</span></button>
-          <button class="btn-main"><i class="fa-solid fa-lock"></i><span> Encriptar</span></button>        
-        </div>
+  </div>
+  <div class="card-main">
+    <div class="card-left">
+      <div class="left-title">       
+        <h2 class="cript-title"><span class="typed"></span > todo lo que quieras</h2> 
+        <p id="instrucciones"><i class="fa-solid fa-eye"></i> Evita caracteres especiales o mayúsculas</p>
       </div>
-      <div class="card-right">
-        <div class="right-result">
-          <div class="resultImgTxt">
-            <img src="img/Muñeco@2x.svg" alt="vector">
-            <h3 class="txt-default">¡Vaya! Aún no tenemos ningún resultado por mostrarte.</h2>
-          </div>
-          <button class="btn-main"><i class="fa-regular fa-clipboard"></i><span> Copiar</span></button>         
+      <div class="left-main">
+        <textarea placeholder="Ingresa el texto que deseas encriptar o desencriptar"></textarea>
+        <div class="left-btns">
+        <button class="btn btn-left"><i class="fa-solid fa-lock-open"></i> Desencriptar</button>
+        <button class="btn btn-left"><i class="fa-solid fa-lock"></i> Encriptar</button>
         </div>
       </div>
     </div>
-    <div class="card-bottom">
-      <div class="bottom-social">
-        <a href="https://www.linkedin.com/in/joshua-fr%C3%ADas/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://github.com/joshuaFrias95" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.behance.net/lagrimas_negras" target="_blank"><i class="fa-brands fa-behance"></i></a>
+    <div class="card-right">
+      <div class="right-result">
+        <img src="img/Muñeco@2x.svg" alt="vector" id="vector">
+        <h3 class="txt-default">¡Vaya! Aún no tenemos ningún resultado por mostrarte.</h3>
       </div>
+      <button class="btn btn-right" id="btn-r"><i class="fa-regular fa-clipboard"></i> Copiar</button>
     </div>
-  </main>
-</div>
-  
+  </div>
+  <div class="card-bottom">
+    <div class="bottom-social">
+      <a href="https://www.linkedin.com/in/joshua-fr%C3%ADas/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/joshuaFrias95" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.behance.net/lagrimas_negras" target="_blank"><i class="fa-brands fa-behance"></i></a>
+    </div> 
+    <p id="hashtag">#Challengeondecodificador5</p>
+  </div>
+</main>
   <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
   <script src="script.js"></script>
 </body>
