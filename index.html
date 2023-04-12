@@ -6,48 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <script src="https://kit.fontawesome.com/3117b56b4e.js" crossorigin="anonymous"></script>
+  
   <link rel="shortcut icon" href="img/bitmapalura.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/styles.css">
   <title>Encriptador | alura Latam</title>
 </head>
+
 <body>
-  <header>
-  <img src="img/Vector@2x.svg" alt="Logo alura">
-  <div class="toogle">Botón toggle para modo oscuro</div>
-  </header>
-  <section>
-    <div class="cript-area">
-    <div class="cript-text">
-    <div class="title">
-      <i class="fa-solid fa-eye"></i>
-      <h1 class="cript-title">Programa de encriptación y desencriptación</h1>
+<div class="container">
+  <main class="card">
+    <div class="card-top">
+      <img src="img/Vector@2x.svg" alt="Logo alura" class="aluraLat">
     </div>
-      <textarea placeholder="Ingresa el texto que deseas encriptar o desencriptar"></textarea>
-    </div>
-      <div class="cript-btns">
-        <button><i class="fa-solid fa-lock-open"></i><span>Desencriptar</span></button>
-        <button><i class="fa-solid fa-lock"></i><span>Encriptar</span></button>
+    <div class="card-main">
+      <div class="card-left">
+        <div class="left-title">
+          <i class="fa-solid fa-eye"></i>
+          <h2 class="cript-title"><span class="typed"></span> todo lo que quieras</h1>       
+        </div>
+        <div class="left-main">
+          <textarea placeholder="Ingresa el texto que deseas encriptar o desencriptar"></textarea>
+          <button class="btn-desenc"><i class="fa-solid fa-lock-open"></i><span> Desencriptar</span></button>
+          <button class="btn-main"><i class="fa-solid fa-lock"></i><span> Encriptar</span></button>        
+        </div>
+      </div>
+      <div class="card-right">
+        <div class="right-result">
+          <div class="resultImgTxt">
+            <img src="img/Muñeco@2x.svg" alt="vector">
+            <h3 class="txt-default">¡Vaya! Aún no tenemos ningún resultado por mostrarte.</h2>
+          </div>
+          <button class="btn-main"><i class="fa-regular fa-clipboard"></i><span> Copiar</span></button>         
+        </div>
       </div>
     </div>
-    <div class="result-area">
-    <img src="img/Muñeco@2x.svg" alt="vector">
-    <div class="result-txt-vector">
-      <h2>¡Vaya! Aún no tenemos ningún resultado por mostrarte.</h2>
+    <div class="card-bottom">
+      <div class="bottom-social">
+        <a href="https://www.linkedin.com/in/joshua-fr%C3%ADas/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/joshuaFrias95" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.behance.net/lagrimas_negras" target="_blank"><i class="fa-brands fa-behance"></i></a>
+      </div>
     </div>
-    <button><i class="fa-regular fa-clipboard"></i><span>Copiar</span></button>
-    </div>
-  </section>
-  <footer>
-    <div class="icons"> 
-      <ul>
-        <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
-        <li><a href=""><i class="fa-brands fa-github"></i></a></li>
-        <li><a href=""><i class="fa-brands fa-behance"></i></a></li>
-      </ul>
-    </div>
-    <div class="hashtag">
-      <span>#challengeonecodificador5</span>
-    </div>
-  </footer>
+  </main>
+</div>
+  
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

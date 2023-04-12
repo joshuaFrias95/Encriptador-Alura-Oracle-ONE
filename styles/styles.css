@@ -1,3 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
 
-/* font-family: 'Roboto', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  list-style: none;
+}
+
+
+
+a {
+text-decoration: none;
+}
+
+a:visited {
+  color: #161616;
+}
+
+.aluraLat {
+  scale: 60%;
+  
+}
+
+
+.crypted {
+  color: #0A3871;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+
+textarea {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #0A3871;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  transition: 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+::placeholder {
+  font-weight: 400;
+  color: #0A3871;
+  opacity: 0.5;
+}
+
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.btn-main {
+  background: #0A3871;
+  color: #f2f2f2;
+  transition:  0.5s;
+}
+
+.btn-main:hover {
+background: #f2f2f2;
+  color: #0A3871;
+  scale: 103%;
+  border: 2px #0A3871 solid;
+}
+
+.btn-desenc {
+  background: #f2f2f2;
+  color: #0A3871;
+  transition: 0.5s;
+}
+
+.btn-desenc:hover {
+  background: #0A3871;
+color: #f2f2f2;
+  scale: 103%;
+  border: 2px #0A3871 solid;
+}
+
