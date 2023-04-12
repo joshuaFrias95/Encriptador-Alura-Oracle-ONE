@@ -2,18 +2,31 @@
 # Encriptador-Alura-Oracle-ONE
 
 
-### ***Programa en desarrollo***
-
 Challenge #1 del programa ONE de [Alura Latam](https://www.aluracursos.com/) y el programa [Oracle Next Education](https://www.oracle.com/mx/education/oracle-next-education/).
 
 Programa que permite encriptar y desencriptar un texto específico, además de permitir copiarlo al portapapeles.
 
+## Aclaración
 
+Este proyecto es un proyecto actualmente en desarrollo a partir de las actividades prácticas de Alura Latam en conjunto con Oracle Next One y se generan versiones nuevas continuamente.
+
+## Optimizaciones
+
+- v1: Primer maquetado y testeo en HTML y HTML del encriptador.
+- v1.1: Optimización del código tanto en html como en HTML, adición de animaciones realizadas con keyframes de CSS y la librería [**Typed.js**](https://github.com/mattboldt/typed.js/) de [@mattboldt](https://github.com/mattboldt), además del primer testeo de funciones para cada botón.
 
 
 ## 🛠 Lenguajes
-![html](https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png) ![css](https://blastcoding.com/wp-content/uploads/2018/10/CSS3.png) ![js](data:image/png;base64,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)
+![html](https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png) ![css](https://blastcoding.com/wp-content/uploads/2018/10/CSS3.png) ![js](https://www.shareicon.net/data/256x256/2016/07/06/106573_software_512x512.png)
+
+
+
 ## Authors
 
 - [@joshuaFrias95](https://github.com/joshuaFrias95/)
+
+## 🔗 Links
+[![behance](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](about:blank)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joshua-fr%C3%ADas/)
+
 
