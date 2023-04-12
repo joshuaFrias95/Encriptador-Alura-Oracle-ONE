@@ -45,6 +45,12 @@ display: flex;
   border: red 1px dotted;
 }
 
+.crypted {
+  color: #0A3871;
+  font-weight: bolder;
+  font-style: normal;
+}
+
 .fa-solid {
   margin: auto 0;
   padding: 2px;
