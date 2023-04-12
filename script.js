@@ -19,4 +19,18 @@ const typed = new Typed('.typed', {
 
 
 // Botón copiar
+function copiar() {
+  console.log("Test de botón de copia");
+}
 
+function encriptar() {
+  console.log("Test de botón encriptar");
+}
+
+function desencriptar() {
+  console.log("Test de botón desencriptar");
+}
+
+document.getElementById('btn-c').onclick = copiar;
+document.getElementById('btn-d').onclick = desencriptar;
+document.getElementById('btn-e').onclick = encriptar;
