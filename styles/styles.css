@@ -7,9 +7,7 @@
   list-style: none;
 }
 
-body {
-  background: #dbdbdb;
-}
+
 
 a {
 text-decoration: none;
@@ -19,31 +17,11 @@ a:visited {
   color: #161616;
 }
 
-header {
-  margin: 1%;
-  display: flex;
-  height: 15%;
-  justify-content: space-between;
-  border: red 1px dotted;
-}
-
 .aluraLat {
   scale: 60%;
-  border: red 1px dotted;
+  
 }
 
-section {
-  display: flex;
-  margin: 40px;
-  width: 95%;
-  height: 70%;
-  border: red 1px dotted;
-}
-
-.title {
-display: flex;
-  border: red 1px dotted;
-}
 
 .crypted {
   color: #0A3871;
@@ -51,17 +29,14 @@ display: flex;
   font-style: normal;
 }
 
-.fa-solid {
-  margin: auto 0;
-  padding: 2px;
-}
 
 textarea {
-  background: #dbdbdb;
   border: none;
   border-radius: 10px;
   padding: 10px;
   color: #0A3871;
+  font-weight: bolder;
+  letter-spacing: 3px;
   transition: 0.3s ease;
 }
 
@@ -75,31 +50,38 @@ textarea:focus {
   opacity: 0.5;
 }
 
-.txt-default {
-  text-align: center;
-  border: red 1px dotted;
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
-footer {
-height: 15%;
-  width: 95%;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  border: red 1px dotted;
+.btn-main {
+  background: #0A3871;
+  color: #f2f2f2;
+  transition:  0.5s;
 }
 
-.icons-ul {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  
+.btn-main:hover {
+background: #f2f2f2;
+  color: #0A3871;
+  scale: 103%;
+  border: 2px #0A3871 solid;
 }
 
-.fa-brands {
-  font-size: 30px;
-  border: red 1px dotted;
+.btn-desenc {
+  background: #f2f2f2;
+  color: #0A3871;
+  transition: 0.5s;
 }
 
-
+.btn-desenc:hover {
+  background: #0A3871;
+color: #f2f2f2;
+  scale: 103%;
+  border: 2px #0A3871 solid;
+}
 
