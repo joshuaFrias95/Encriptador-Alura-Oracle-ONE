@@ -16,33 +16,43 @@ const typed = new Typed('.typed', {
   cursorChar: '_'
 });
 
+
+
 const textArea = document.querySelector('textarea');
 const btnC = document.getElementById('btn-c');
 const btnD = document.getElementById('btn-d');
 const btnE = document.getElementById('btn-e');
+const vocales = ['a', 'e', 'i', 'o', 'u'];
+const codigos = ["ai", "enter", "imes", "ober", "ufat"];
 
 textArea.focus();
 textArea.value = "";
 
-// Botón copiar
+
 function copiar() {
   console.log("Test de botón de copia");
   textArea.value = "";
 }
 
+
 function encriptar() {
-  let valor = textArea.value;
+  let valor = textArea.value.toLowerCase();
   let valorEncriptado;
   
   console.log("Test de botón encriptar");
   console.log(valor);
+  console.log(valor.split(""));
 }
 
+
 function desencriptar() {
-  let valor = textArea.value;
+  let valor = textArea.value.toLowerCase();
   console.log("Test de botón desencriptar");
   console.log(valor);
+  console.log(valor.split(""));
 }
+
+
 
 btnC.onclick = copiar;
 btnE.onclick = encriptar;
