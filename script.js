@@ -43,14 +43,24 @@ function copiar() {
 
 
 function encriptar() {
-  let valorEncriptado = valor.replaceAll('a', "ai").replaceAll('e', "enter").replaceAll('i', "imes").replaceAll('o', "ober").replaceAll('u', "ufai");
+  let valorEncriptado = valor.replaceAll('a', "ai")
+  .replaceAll('e', "enter")
+  .replaceAll('i', "imes")
+  .replaceAll('o', "ober")
+  .replaceAll('u', "ufai");
   
-  test(valrEncriptado);
+  test(valorEncriptado);
 }
 
 
 function desencriptar() {
-  test("Mensaje Descriptar");
+  let valorResuelto = valor.replaceAll('ai', "a")
+  .replaceAll('enter', "e")
+  .replaceAll('imes', "i")
+  .replaceAll('ober', "o")
+  .replaceAll('ufai', "u");
+  
+  test(valorResuelto);
 }
 
 
