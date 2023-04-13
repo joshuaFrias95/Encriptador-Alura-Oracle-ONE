@@ -13,45 +13,34 @@
 </head>
 
 <body>
-  <main class="card">
-  <div class="top-card">
-    <img src="img/Vector@2x.svg" alt="Logo alura" id="aluraLat">
-    <div class="toggle">
-    <input type="checkbox" id="toggle" />
-    <label for="toggle"></label>
-    </div>
-  </div>
-  <div class="card-main">
-    <div class="card-left">
-      <div class="left-title">       
-        <h2 class="cript-title"><span class="typed"></span > todo lo que quieras</h2> 
-        <p id="instrucciones"><i class="fa-solid fa-eye"></i> Evita caracteres especiales o mayúsculas</p>
-      </div>
-      <div class="left-main">
-        <textarea placeholder="Ingresa el texto que deseas encriptar o desencriptar"></textarea>
-        <div class="left-btns">
-        <button class="btn btn-left" id="btn-d"><i class="fa-solid fa-lock-open"></i> Desencriptar</button>
-        <button class="btn btn-left" id="btn-e"><i class="fa-solid fa-lock"></i> Encriptar</button>
+  <img src="img/Vector@2x.svg" alt="logoAlura" id="logoAlura">
+  <main id="main-container">
+    <div class="linea" id="left-deck">
+      <h1><span class="typed"></span ></h1>
+      <textarea placeholder="Ingresa el texto que deseas encriptar o desencriptar"></textarea>
+      <div>
+        <p id="upsi"><i class="fa-solid fa-poo"></i> El programa solo admite minúsculas y sin acentos por ahora, lo sabemos, es una pena.</p>
+        <div id="mainbttns">
+          <button class="bttns bttns-left"id="btn-d"><i class="fa-solid fa-lock-open"></i>  Desencriptar</button>
+          <button class="bttns bttns-left"id="btn-e"><i class="fa-solid fa-lock"></i> Encriptar</button>
         </div>
       </div>
     </div>
-    <div class="card-right">
-      <div class="right-result">
-        <img src="img/Muñeco@2x.svg" alt="vector" id="vector">
-        <h3 class="txt-default">¡Vaya! Aún no tenemos ningún resultado por mostrarte.</h3>
+    <div class="linea" id="right-deck">
+      <img src="img/Muñeco@2x.svg" id="doll">
+      <div>
+        <h2 class="txt-center info" id="subtitulo">¡Vaya, aún no tenemos<br>nada qué mostrarte!</h2>
+        <p class="txt-center info" id="texto">Ingresa un texto, será divertido.</p>
+        <button class="bttns" id="btn-c"><i class="fa-regular fa-clipboard"></i> Copiar</button>
       </div>
-      <button class="btn btn-right" id="btn-c"><i class="fa-regular fa-clipboard"></i> Copiar</button>
     </div>
-  </div>
-  <div class="card-bottom">
-    <div class="bottom-social">
-      <a href="https://www.linkedin.com/in/joshua-fr%C3%ADas/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://github.com/joshuaFrias95" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.behance.net/lagrimas_negras" target="_blank"><i class="fa-brands fa-behance"></i></a>
-    </div> 
-    <p id="hashtag">#Challengeondecodificador5</p>
-  </div>
-</main>
+    <div>
+    </div>
+  </main>
+  <a  class="social"id="social1" href="https://www.linkedin.com/in/joshua-fr%C3%ADas/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+  <a  class="social"id="social2" href="https://github.com/joshuaFrias95" target="_blank"><i class="fa-brands fa-github"></i></a>
+  <a  class="social"id="social3" href="https://www.behance.net/lagrimas_negras" target="_blank"><i class="fa-brands fa-behance"></i></a>
+  <span id="hashtag">#Challengeondecodificador5</p>
   <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
   <script src="script.js"></script>
 </body>

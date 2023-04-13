@@ -6,8 +6,7 @@ const typed = new Typed('.typed', {
             '<i class="crypted">Repite</i>'
   ],
   stringElement: '#cadenas-texto',
-  typeSpeed: 75,
-  startDelay: 300,
+  typeSpeed: 80,
   backSpeed: 75,
   shuffle: false,
   backDelay: 1000,
