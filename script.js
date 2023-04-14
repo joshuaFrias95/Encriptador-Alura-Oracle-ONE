@@ -1,9 +1,9 @@
 //Typed.js
 
 const typed = new Typed('.typed', {
-  strings: ['<i class="crypted">Encripta</i>',
-            '<i class="crypted">Desencripta</i>',
-            '<i class="crypted">Repite</i>'
+  strings: ['<i class="crypted firstC">Encripta</i>',
+            '<i class="crypted secondC">Desencripta</i>',
+            '<i class="crypted thirdC">Repite</i>'
   ],
   stringElement: '#cadenas-texto',
   typeSpeed: 80,
@@ -17,44 +17,64 @@ const typed = new Typed('.typed', {
 });
 
 
+// Lógica de encriptación y desencriptación
 
 const textArea = document.querySelector('textarea');
 const btnC = document.getElementById('btn-c');
-const btnD = document.getElementById('btn-d');
 const btnE = document.getElementById('btn-e');
+const btnD = document.getElementById('btn-d');
+ let encripta= {
+ 'a': 'ai',
+ 'e': 'enter',
+ 'i': 'imes',
+ 'o': 'ober',
+ 'u': 'ufai'
+ };
+ 
+ let codigos= {
+ 'ai': 'a',
+ 'enter': 'e',
+ 'imes': 'i',
+ 'ober': 'o',
+ 'ufat': 'u'
+ }; 
+ 
 
-let valor = textArea.value.toLowerCase();
-
-textArea.focus();
 textArea.value = "";
+textArea.focus();
 
 
 
 function copiar() {
-  console.log("Mensaje Copia");
+  console.log("Copia");
 }
 
-
+function mostrar(texto) {
+  
+  document.getElementById('showResult').innerHTML = texto;
+}
 
 function encriptar() {
-  let valorEncriptado = valor.replaceAll('a', "ai")
-  .replaceAll('e', "enter")
-  .replaceAll('i', "imes")
-  .replaceAll('o', "ober")
-  .replaceAll('u', "ufai");
+  let texto = textArea.value.toLowerCase();
+  textArea.value = "";
   
-  console.log(valorEncriptado);
+  texto = texto.replace(/a|e|i|o|u/g, function(matched){
+    return encripta[matched]
+  });
+  
+  mostrar(texto);
 }
 
 
 function desencriptar() {
-  let valorResuelto = valor.replaceAll('ai', "a")
-  .replaceAll('enter', "e")
-  .replaceAll('imes', "i")
-  .replaceAll('ober', "o")
-  .replaceAll('ufai', "u");
+  let texto = textArea.value.toLowerCase(); 
+  textArea.value = "";
   
-  console.log(valorResuelto);
+ texto = texto.replace(/ai|enter|imes|ober|ufat/g, function(matched){
+  return codigos[matched]
+ });
+ 
+ mostrar(texto);
 }
 
 
@@ -62,4 +82,3 @@ function desencriptar() {
 btnC.onclick = copiar;
 btnE.onclick = encriptar;
 btnD.onclick = desencriptar;
-
