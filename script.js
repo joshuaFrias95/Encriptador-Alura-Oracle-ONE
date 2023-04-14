@@ -30,14 +30,8 @@ textArea.value = "";
 
 
 
-function test(test) {
-  console.log(test);
-}
-
-
-
 function copiar() {
-  test("Mensaje Copia");
+  console.log("Mensaje Copia");
 }
 
 
@@ -49,7 +43,7 @@ function encriptar() {
   .replaceAll('o', "ober")
   .replaceAll('u', "ufai");
   
-  test(valorEncriptado);
+  console.log(valorEncriptado);
 }
 
 
@@ -60,7 +54,7 @@ function desencriptar() {
   .replaceAll('ober', "o")
   .replaceAll('ufai', "u");
   
-  test(valorResuelto);
+  console.log(valorResuelto);
 }
 
 
@@ -68,3 +62,4 @@ function desencriptar() {
 btnC.onclick = copiar;
 btnE.onclick = encriptar;
 btnD.onclick = desencriptar;
+
