@@ -23,6 +23,7 @@ const textArea = document.querySelector('textarea');
 const btnC = document.getElementById('btn-c');
 const btnE = document.getElementById('btn-e');
 const btnD = document.getElementById('btn-d');
+const result = document.getElementById('showResult');
  let encripta= {
  'a': 'ai',
  'e': 'enter',
@@ -46,13 +47,32 @@ textArea.focus();
 
 
 function copiar() {
-  console.log("Copia");
+  navigator.clipboard.writeText(result.innerHTML);
 }
+
+
+
+function cambiarClase() {
+
+  //Oculta
+  document.getElementById('doll').classList.add('oculto');
+  document.getElementById('subtitulo').classList.add('oculto');
+  document.getElementById('texto').classList.add('oculto');
+  //Muestra
+  document.getElementById('subtitulo2').classList.remove('oculto');
+  result.classList.remove('oculto');
+  btnC.classList.remove('oculto');
+
+}
+
+
 
 function mostrar(texto) {
   
   document.getElementById('showResult').innerHTML = texto;
 }
+
+
 
 function encriptar() {
   let texto = textArea.value.toLowerCase();
@@ -62,6 +82,7 @@ function encriptar() {
     return encripta[matched]
   });
   
+  cambiarClase();
   mostrar(texto);
 }
 
@@ -74,6 +95,7 @@ function desencriptar() {
   return codigos[matched]
  });
  
+ cambiarClase();
  mostrar(texto);
 }
 

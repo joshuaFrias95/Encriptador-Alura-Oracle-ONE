@@ -19,7 +19,7 @@
     <section class="izquierda">
       <h1><span class="typed"></span ></h1>
       <textarea placeholder="Ingresa el texto que quieras encriptar o desencriptar"></textarea>
-      <p id="upsi"><i class="fa-solid fa-poo"></i> El programa no admite caracteres especiales, lo sabemos, es una pena.</p>
+      <p id="upsi"><i class="fa-solid fa-poo"></i> El programa no admite caracteres especiales ni mayúsculas, lo sabemos, es una pena.</p>
       <div id="mainbttns">
         <button class="bttns bttns-left"id="btn-d"><i class="fa-solid fa-lock-open"></i>  Desencriptar</button>
         <button class="bttns bttns-left"id="btn-e"><i class="fa-solid fa-lock"></i> Encriptar</button>
@@ -27,21 +27,22 @@
     </section>
     <section class="derecha">
     <div class="sideA">
-      <img src="img/Muñeco@2x.svg" alt="Looking for" id="doll">
+      <img class="doll" id="doll" src="img/Muñeco@2x.svg" alt="Looking for" >
       <h2 class="txt-center info" id="subtitulo">¡Vaya, aún no tenemos<br>nada qué mostrarte!</h2>
-      <!-- <p class="txt-center info" id="texto">Ingresa un texto, será divertido.</p> -->
-    </div>
-    <div class="sideB">
-      <p id="showResult"></p>
-      <button class="bttns" id="btn-c"><i class="fa-regular fa-clipboard"></i> Copiar</button>
+      <p class="txt-center info" id="texto"><i class="fa-solid fa-jedi"></i> Ingresa un texto, será divertido.</p>
+      <h2 class="txt-center info oculto" id="subtitulo2">¡Muy bien!<br>Tu mensaje es:</h2>
+      <p id="showResult" class="oculto"></p>
+      <button class="bttns btn-c oculto" id="btn-c"><i class="fa-regular fa-clipboard"></i> Copiar</button>
     </div>
     </section>
   </main>
   <footer>
+  <div class="social">
     <a  class="social"id="social1" href="https://www.linkedin.com/in/joshua-fr%C3%ADas/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
     <a  class="social"id="social2" href="https://github.com/joshuaFrias95" target="_blank"><i class="fa-brands fa-github"></i></a>
     <a  class="social"id="social3" href="https://www.behance.net/lagrimas_negras" target="_blank"><i class="fa-brands fa-behance"></i></a>
-    <span id="hashtag">#Challengeondecodificador5</p> 
+    </div>
+    <p id="hashtag">#Challengeondecodificador5</p> 
   </footer>
   
   <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
