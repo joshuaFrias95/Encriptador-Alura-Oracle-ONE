@@ -5,6 +5,26 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'inter';
+  transition: ease all 0.3s;
+}
+
+.bg-claro {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #aluraLogo {
@@ -19,24 +39,53 @@
 
   width: 95%;
   margin: 0 auto;
-  border: red 2px solid;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
 }
 
+.izquierda, .derecha {
+padding: 5%;
+  background: rgba(237, 237, 237, 0.4);
+  border-radius: 20px;
+  box-shadow: 1px 10px 43px 3px rgba(255,255,255,0.62);
+-webkit-box-shadow: 1px 10px 43px 3px rgba(255,255,255,0.62);
+-moz-box-shadow: 1px 10px 43px 3px rgba(255,255,255,0.62);
+  
+}
+
+textarea {
+  width: 596px;
+  height: 216px;
+  border: none;
+  background: none;
+  resize: none;
+}
+
+
 #mainbttns {
-width: 60%;
-border: red 2px solid;
-margin: 0 auto;
+  width: 60%;
+  margin: 20px auto 0 auto;
   display: flex;
   justify-content: space-evenly;
 }
 
 .bttns {
+  cursor: pointer;
   border-radius: 20px;
-  padding: 2%;
+  border: none;
+  padding: 3%;
+  background: #0A3871;
+  color: #F2F2F2;
+  font-weight: bolder;
+}
+
+#hashtag {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
 
 .oculto {
