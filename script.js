@@ -36,7 +36,7 @@ const btnD = document.getElementById('btn-d');
  'enter': 'e',
  'imes': 'i',
  'ober': 'o',
- 'ufat': 'u'
+ 'ufai': 'u'
  }; 
  
 
@@ -70,7 +70,7 @@ function desencriptar() {
   let texto = textArea.value.toLowerCase(); 
   textArea.value = "";
   
- texto = texto.replace(/ai|enter|imes|ober|ufat/g, function(matched){
+ texto = texto.replace(/ai|enter|imes|ober|ufai/g, function(matched){
   return codigos[matched]
  });
  

@@ -55,14 +55,44 @@ padding: 5%;
   
 }
 
+
 textarea {
   width: 596px;
   height: 216px;
   border: none;
   background: none;
   resize: none;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(210, 210, 210, 0.4);
+  overflow: hidden;
+  transition: 0.4s ease;
+  margin: 20px auto;
+  color: #0A3871;
+  font-weight: bolder;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
+textarea:focus {
+  outline: none;
+}
+
+textarea:hover {
+  transform: scale(1.05);
+}
+
+.fa-poo {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+#upsi {
+  font-size: 12px;
+  font-weight: 200;
+  font-style: italic;
+  cursor: default;
+}
 
 #mainbttns {
   width: 60%;
