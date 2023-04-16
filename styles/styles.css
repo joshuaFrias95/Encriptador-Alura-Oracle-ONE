@@ -125,6 +125,10 @@ textarea:hover {
   color: #F2F2F2;
 }
 
+.bttns:focus {
+  outline: none;  
+}
+
 #mainbttns {
   width: 60%;
   margin: 20px auto 0 auto;
@@ -133,7 +137,7 @@ textarea:hover {
 }
 
 .doll {
-  width: 40%;
+  width: 65%;
   display: block;
   margin: 0 auto;
   animation: float 5s ease infinite;
@@ -157,6 +161,7 @@ textarea:hover {
 
 .info {
   letter-spacing: 1px;
+  color: #161616;
 }
 
 #subtitulo {
@@ -172,17 +177,25 @@ textarea:hover {
 }
 
 #showResult {
+  max-height: 235px;
   text-align: center;
-  font-weight: bolder;
-  margin: 50px;
+  cursor: default;
+  letter-spacing: 3px;
+  font-weight: 300;
+  margin: 50px 30px 30px 30px;
   display: block; 
   text-overflow: clip;
+}
+
+.ajuste {
+  min-height: 235px;
 }
 
 .btn-c {
   padding: 15px;
   display: block;
   margin: 0 auto;
+  border: none;
 }
 
 footer {

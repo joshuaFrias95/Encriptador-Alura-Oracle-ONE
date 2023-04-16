@@ -62,6 +62,7 @@ function cambiarClase() {
   document.getElementById('subtitulo2').classList.remove('oculto');
   document.getElementById('copyarea').classList.remove('oculto');
   result.classList.remove('oculto');
+  result.classList.add('ajuste');
 
 }
 
