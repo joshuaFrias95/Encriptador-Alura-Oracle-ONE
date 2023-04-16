@@ -60,8 +60,8 @@ function cambiarClase() {
   document.getElementById('texto').classList.add('oculto');
   //Muestra
   document.getElementById('subtitulo2').classList.remove('oculto');
+  document.getElementById('copyarea').classList.remove('oculto');
   result.classList.remove('oculto');
-  btnC.classList.remove('oculto');
 
 }
 
