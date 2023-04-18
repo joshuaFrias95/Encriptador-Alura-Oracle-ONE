@@ -25,13 +25,13 @@ El diseño original proponía un área a la izquierda en donde el usuario pudier
 
 - v2: Tras orientación por parte del equipo de [Alura Latam](https://www.aluracursos.com/), decidí simplificar el fichero html a tres secciones primordiales, además, tras analizar el primer maquetado noté que podría ocupar más el espacio en pantalla y jugar con los elementos de una mejor manera, además de eliminar elementos innecesarios como el toggle de modo oscuro. Mi objetivo principal fue darle dinamismo y un mayor sentido lúdico a los dos elementos principales: las áreas de entrada y salida de texto.
 
-![](/img/readme/2023-04-16-00-10-43.gif)
+![](/readme/2023-04-16-00-10-43.gif)
 
 
 
 ## Insignia de Challenge completado
 
-![](/img/readme/insignia.png)
+![](/readme/insignia.png)
 
 
 

@@ -17,6 +17,7 @@ const typed = new Typed('.typed', {
 });
 
 
+
 // Lógica de encriptación y desencriptación
 
 const textArea = document.querySelector('textarea');
@@ -83,7 +84,7 @@ function encriptar() {
     return encripta[matched]
   });
   
-  cambiarClase();
+  //cambiarClase();
   mostrar(texto);
 }
 
@@ -96,7 +97,7 @@ function desencriptar() {
   return codigos[matched]
  });
  
- cambiarClase();
+ //cambiarClase();
  mostrar(texto);
 }
 
