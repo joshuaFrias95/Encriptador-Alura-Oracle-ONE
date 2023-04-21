@@ -36,14 +36,11 @@ html, body {
 canvas {
   width: 100%;
   height: 100vh;
-  background:hsla(0,0%,0%,1);
+  background: hsla(0,0%,90%,1);
+  z-index: -1;
 }
 
-#aluraLogo {
-  position: sticky;
-  top: 1.5%;
-  left: 1.5%;
-}
+
 
 #contenedor {
   width: 95%;
@@ -58,16 +55,23 @@ canvas {
 }
 #izquierda, #derecha {
   padding: 5%;
-  max-height: 680px;
+  max-height: 466px;
   border-radius: 20px;
   overflow-y: auto;
   margin-left: 15px;
+  background-color: rgba(125, 140, 196, 0.2);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24), 0 1px 3px 2px rgba(0, 0, 0, 0.24);
 }
 
 #izquierda {
   width: 100%;
   padding: 5%;
 }
+
+
 
 #derecha {
   width: 95%;
@@ -77,23 +81,29 @@ canvas {
 }
 
 .crypted {
+  content: 'Encriptador | Desencriptador';
   font-family: 'Bebas Neue', cursive;
-  cursor: default
+  cursor: default;
+  font-size: 2.3em;
+  letter-spacing: 2px;
 }
 
 textarea {
   width: 100%;
-  height: 216px;
+  height: 230px;
   border: none;
   background: none;
   resize: none;
   padding: 20px;
   border-radius: 20px;
   overflow: hidden;
-  margin: 20px auto;
+  margin: 10px auto;
   font-weight: bolder;
   font-size: 15px;
   letter-spacing: 2px;
+  background-color: rgba(250, 250, 250, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 textarea:focus {
@@ -102,12 +112,14 @@ textarea:focus {
 
 .fa-face-smile-wink {
   margin-left: 10px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 #upsi {
+line-height: 2em;
   font-size: 12px;
-  font-weight: 200;
+  font-weight: 300;
+  margin-bottom: 20px;
   font-style: italic;
   cursor: default
 }
@@ -125,7 +137,13 @@ button {
   padding: 3% 2%;
   font-weight: bolder;
   font-size: 15px;
-  transition: 0.3s ease;
+  transition: 0.2s;
+  letter-spacing: 1px;
+  background-color: rgba(209, 172, 0, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24), 0 1px 3px 2px rgba(0, 0, 0, 0.24);
+  color: #161616;
 }
 
 button:hover {
@@ -136,10 +154,19 @@ button:focus {
   outline: none;
 }
 
+.fa-heart {
+font-size: 2em;
+}
+
+.title {
+  font-weight: bolder;
+  font-size: 1.5m;
+}
+
 .doll {
   width: 50%;
   display: block;
-  margin: 30px auto;
+  margin: 60px auto;
   animation: float 5s ease infinite;
 }
 
@@ -161,6 +188,10 @@ button:focus {
   margin: 50px 30px 30px 30px;
   display: block;
   letter-spacing: 3px;
+  background-color: rgba(250, 250, 250, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
 }
 
 .nav {
@@ -178,18 +209,18 @@ button:focus {
 }
 
 .sm-header {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 200;
   text-transform: uppercase;
   cursor: pointer;
   pointer-events: auto;
 }
 .line {
-  width: 10rem;
+  width: 8rem;
   height: 1px;
   background-color: #161616;
   margin-left: 0.5rem;
-  transform: scaleX(0.3);
+  transform: scaleX(0.4);
   transform-origin: left;
   transition: transform 0.5s ease;
 }
@@ -204,10 +235,11 @@ button:focus {
 }
 
 .nav-item {
-  margin-inline: 1.5rem;
+  margin-inline: 1rem;
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s;
 }
+
 
 .nav-item:nth-child(odd) {
   transform: translateY(5rem);
@@ -223,5 +255,5 @@ button:focus {
 }
 
 .nav-link {
-  font-size: 2.6rem;
+  font-size: 2rem;
 }
