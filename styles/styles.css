@@ -33,6 +33,12 @@ html, body {
   max-height: 155px;
 }
 
+canvas {
+  width: 100%;
+  height: 100vh;
+  background:hsla(0,0%,0%,1);
+}
+
 #aluraLogo {
   position: sticky;
   top: 1.5%;
