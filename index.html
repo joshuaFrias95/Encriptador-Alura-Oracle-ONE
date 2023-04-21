@@ -12,27 +12,28 @@
   <title>Encriptador | Desencriptador</title>
 </head>
 <body>
-  <img src="img/Vector@2x.svg" alt="Logo alura" id="aluraLogo">
+<img src="img/Vector@2x.svg" alt="Logo alura" id="aluraLogo">
   <main id="contenedor">
     <section id="izquierda">
       <h1><span class="typed"></span ></h1>
       <form>
         <textarea placeholder="Ingresa el texto que quieras encriptar o desencriptar" required></textarea>
       </form>
-      <p id="upsi"><i class="fa-solid fa-poo"></i> El programa no admite caracteres especiales ni mayúsculas, lo sabemos, es una pena.</p>
+      <p id="upsi">Evita usar caracteres especiales o mayúsculas, de cualquier manera, no te juzgaremos si lo haces  <i class="fa-solid fa-face-smile-wink"></i></p>
       <div id="mainbttns">
-        <input id="btn-d" type="submit" value="Desencriptar">
-        <input id="btn-e" type="submit" value="Encriptar">
+        <button id="btn-d" value="Desencriptar"><i class="fa-solid fa-unlock"></i> Desencriptar</button>
+        <button id="btn-e" value="Encriptar"><i class="fa-solid fa-lock"></i> Encriptar</button>
       </div>
     </section>
     <section id="derecha">
       <div class="sideA">
         <h2>¡Vaya, aún no tenemos<br>nada qué mostrarte!</h2>
-        <img src="img/icon.svg" alt="cyffer">
+        <img src="img/icon.svg" alt="cyffer" class="doll">
         <p><i class="fa-solid fa-jedi"></i> Ingresa un texto, será divertido.</p>
-        <h2>¡Muy bien!<br>Tu mensaje es:</h2>
+        <p class="oculto"><i class="fa-solid fa-heart fa-flip"></i></p>
+        <h2 class="oculto">¡Muy bien!<br>Tu mensaje es:</h2>
         <p id="showResult"></p>
-        <button id="btn-c"><i class="fa-regular fa-clipboard"></i> Copiar</button>
+        <button id="btn-c" class="oculto"><i class="fa-regular fa-clipboard"></i> Copiar</button>
       </div>
     </section>
   </main>

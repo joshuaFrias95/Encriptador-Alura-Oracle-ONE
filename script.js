@@ -84,7 +84,7 @@ function encriptar() {
     return encripta[matched]
   });
   
-  //cambiarClase();
+  cambiarClase();
   mostrar(texto);
 }
 
@@ -97,7 +97,7 @@ function desencriptar() {
   return codigos[matched]
  });
  
- //cambiarClase();
+ cambiarClase();
  mostrar(texto);
 }
 
@@ -106,3 +106,5 @@ function desencriptar() {
 btnC.onclick = copiar;
 btnE.onclick = encriptar;
 btnD.onclick = desencriptar;
+
+
