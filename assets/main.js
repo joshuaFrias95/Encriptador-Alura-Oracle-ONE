@@ -1,4 +1,53 @@
 // Lógica de encriptación y desencriptación
+
+// Botones
+const btnC = document.getElementById('btn-c');
+
+// Áreas de texto
+const result = document.getElementById('showResult');
+
+// Cuadro de Notificación
+const toast = document.querySelector('.toast');
+(closeIcon = document.querySelector('.close')),
+(progress = document.querySelector('.progress'));
+
+
+function notification() {
+  
+  let timer1, timer2;
+  
+  btnC.addEventListener("click", () => {
+    toast.classList.add("active");
+    progress.classList.add("active");
+    
+    timer1 = setTimeout(() => {
+      toast.classList.remove("active");
+    }, 5000);
+    
+    timer2 = setTimeout(() => {
+      progress.classList.remove("active");
+    }, 5300);
+  });
+  
+  closeIcon.addEventListener("click", () => {
+    toast.classList.remove("active");
+    
+    setTimeout(() => {
+      progress.classList.remove("active");
+    }, 200);
+    
+    clearTimeout(timer1);
+    clearTimeout(timer2);
+  })
+}
+
+
+function clipboard() {
+  notification();
+  navigator.clipboard.writeText(result.innerHTML);
+}
+
+btnC.addEventListener("click", clipboard);
 // const textArea = document.querySelector('textarea');
 // const btnC = document.getElementById('btn-c'); 
 // const btnE = document.getElementById('btn-e');

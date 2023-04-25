@@ -23,8 +23,8 @@
 			<div class="izquierda-contenido">
 				<textarea placeholder="Ingresa el texto que quieras encriptar o desencriptar" required></textarea>
 				<div class="mainbttns">
-					<button id="btn-d" value="Desencriptar"><i class="fa-solid fa-unlock"></i> Desencriptar</button>
-					<button id="btn-e" value="Encriptar"><i class="fa-solid fa-lock"></i> Encriptar</button>
+					<button id="btn-d"><i class="fa-solid fa-unlock"></i> Desencriptar</button>
+					<button id="btn-e"><i class="fa-solid fa-lock"></i> Encriptar</button>
 				</div>
 			</div>
     </section>
@@ -45,7 +45,7 @@
             <p><i class="fa-solid fa-arrow-right"></i> Copia el resultado en el campo de texto para desencriptar o ingresa un nuevo texto para encriptar.</p>
           </div>
           <div class="boton">
-            <button id="btn-c" value="Encriptar"><i class="fa-regular fa-clipboard"></i> Copiar</button>
+            <button id="btn-c" ><i class="fa-regular fa-clipboard"></i> Copiar</button>
           </div>
         </div>
       </div>
@@ -67,6 +67,18 @@
       </li>       
     </ul>
   </nav>
+  
+  <div class="toast">
+    <div class="toast-content">
+      <i class="fas fa-solid fa-check check"></i>
+      <div class="message">
+        <span class="text text-1">¡Mensaje Copiado con éxito</span>
+        <span class="text text-2">Ahora podemos continuar.</span>
+      </div>
+    </div>
+    <i class="fa-solid fa-xmark close"></i>
+    <div class="progress"></div>
+  </div>
   
   <script src="assets/main.js"></script>
 </body>
