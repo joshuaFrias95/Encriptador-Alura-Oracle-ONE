@@ -7,38 +7,35 @@
   
   <script src="https://kit.fontawesome.com/3117b56b4e.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="img/bitmapalura.ico" type="image/x-icon">
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="assets/styles.css">
   
   <title>Encriptador | Desencriptador</title>
 </head>
 <body>
-<canvas id="canv"></canvas>
-<img src="img/Vector@2x.svg" alt="Logo alura" id="aluraLogo">
+	<canvas id="canv"></canvas>
+  <header>
+    <img src="img/Vector@2x.svg" alt="" class="aluraLogo">
+    <span class="hashtag">#challengeonecodificador5</span>
+  </header>
+  
   <main id="contenedor">
     <section id="izquierda">
-      <h1 class="crypted">Encriptador | Desencriptador</h1>
-      <form>
-        <textarea placeholder="Ingresa el texto que quieras encriptar o desencriptar" required></textarea>
-      </form>
-      <p id="upsi">Evita usar caracteres especiales o mayúsculas, de cualquier manera, no te juzgaremos si lo haces.  <i class="fa-solid fa-face-smile-wink"></i></p>
-      <div id="mainbttns">
-        <button id="btn-d" value="Desencriptar"><i class="fa-solid fa-unlock"></i> Desencriptar</button>
-        <button id="btn-e" value="Encriptar"><i class="fa-solid fa-lock"></i> Encriptar</button>
-      </div>
+			<h1 class="title">Programa de encriptación y desencriptación</h1>
+			<div class="izquierda-contenido">
+				<textarea placeholder="Ingresa el texto que quieras encriptar o desencriptar" required></textarea>
+				<div class="mainbttns">
+					<button id="btn-d" value="Desencriptar"><i class="fa-solid fa-unlock"></i> Desencriptar</button>
+					<button id="btn-e" value="Encriptar"><i class="fa-solid fa-lock"></i> Encriptar</button>
+				</div>
+			</div>
     </section>
+    
     <section id="derecha">
-      <div class="sideA">
-        <h2 id="titulo" class="title">¡Vaya, aún no tenemos<br>nada qué mostrarte!</h2>
-        <img src="img/icon.svg" alt="cyffer" class="doll" id="doll">
-        <p class="oculto" id="corazon"><i class="fa-solid fa-heart fa-flip"></i></p>
-        <h2 id="titulo2" class="title oculto">¡Muy bien!<br>Tu mensaje es:</h2>
-        <p class="showResult" id="showResult"></p>
-        <button id="btn-c" class="oculto"><i class="fa-regular fa-clipboard"></i> Copiar</button>
-      </div>
+      <img src="img/icon.svg" alt="" class="vector">
     </section>
   </main>
-  
-  <nav class="nav">
+
+	<nav class="nav">
     <h4 class="sm-header">Contacto</h4>
     <div class="line"></div>
     <ul class="nav-list">
@@ -54,7 +51,6 @@
     </ul>
   </nav>
   
-  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-  <script src="script.js"></script>
+  <script src="assets/main.js"></script>
 </body>
 </html>

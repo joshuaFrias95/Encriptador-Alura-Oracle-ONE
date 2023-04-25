@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&family=Vina+Sans&display=swap');
+
+
+/* font-family: 'Poppins', sans-serif;
+
+font-family: 'Vina Sans', cursive; */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+#canv {
+  width: 100%;
+  height: 100vh;
+  background: hsla(0,0%,90%,1);
+  z-index: -1;
+}
+
+header {
+  position: absolute;
+  width: 96%;
+  left: 50%;
+  top: 1.5%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+
+header img {
+  width: 3%;
+}
+
+header span {
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: 200;
+}
+
+#contenedor {
+  outline: 1px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:90%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  padding: 1.5%;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    justify-content: center;
+  }
+  
+  
+  
+  header span {
+    display: none;
+  }
+  
+  #contenedor {
+    flex-direction: column;
+  }
+}
