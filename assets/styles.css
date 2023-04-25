@@ -13,6 +13,10 @@ font-family: 'Vina Sans', cursive; */
   font-family: 'Poppins', sans-serif;
 }
 
+*:focus {
+  outline: none;
+}
+
 #canv {
   width: 100%;
   height: 100vh;
@@ -33,7 +37,7 @@ header {
 }
 
 header img {
-  width: 3%;
+  width: 2%;
 }
 
 header span {
@@ -43,16 +47,102 @@ header span {
 }
 
 #contenedor {
-  outline: 1px solid red;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width:90%;
+  width:97%;
   height: 80%;
   display: flex;
   flex-direction: row;
+  gap: 60px;
   padding: 1.5%;
+}
+
+#izquierda, #derecha {
+  background-color: rgba(140, 140, 140, 0.08);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24), 0 1px 3px 2px rgba(0, 0, 0, 0.24);
+}
+
+#izquierda {
+  width: 60%;
+}
+
+.izquierda-contenido {
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+}
+
+textarea {
+  width: 100%;
+  height: 75%;
+  resize: none;
+  background: transparent;
+  border: none;
+  letter-spacing: 2px;
+  padding: 8px;
+  font-weight: bolder;
+  text-transform: lowercase;
+}
+
+.mainbttns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  padding: 1.5% 2%;
+  font-weight: bolder;
+  font-size: 15px;
+  transition: 0.2s ease;
+  letter-spacing: 1px;
+  background-color: rgba(209, 172, 0, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24), 0 1px 3px 2px rgba(0, 0, 0, 0.24);
+  color: #161616;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#derecha {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vector {
+  width: 80%;
+  animation: float 5s ease infinite;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.vectorCat {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -60,13 +150,33 @@ header span {
     justify-content: center;
   }
   
-  
+  header img {
+    width: 5%;
+  }
   
   header span {
     display: none;
   }
   
   #contenedor {
+  top: 47%;
     flex-direction: column;
+  }
+  
+  #izquierda, #derecha {
+    width: 100%;
+  }
+  
+  #izquierda {
+    height: 60%;
+  }
+  
+  .vector {
+    display: none;
+  }
+  
+  .vectorCat {
+    display: block;
+    width: 50%;
   }
 }
