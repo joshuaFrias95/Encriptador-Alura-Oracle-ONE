@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&family=Vina+Sans&display=swap');
 
 
-/* font-family: 'Poppins', sans-serif;
-
-font-family: 'Vina Sans', cursive; */
-
-
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +10,10 @@ font-family: 'Vina Sans', cursive; */
 
 *:focus {
   outline: none;
+}
+
+a:visited {
+  color: inherit;
 }
 
 #canv {
@@ -62,8 +61,8 @@ header span {
 #izquierda, #derecha {
   background-color: rgba(140, 140, 140, 0.08);
   border-radius: 10px;
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24), 0 1px 3px 2px rgba(0, 0, 0, 0.24);
 }
 
@@ -87,7 +86,7 @@ textarea {
   background: transparent;
   border: none;
   letter-spacing: 2px;
-  padding: 8px;
+  padding: 3%;
   font-weight: bolder;
   text-transform: lowercase;
 }
@@ -122,7 +121,10 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 5%;
 }
+
 
 .vector {
   width: 80%;
@@ -145,6 +147,81 @@ button:hover {
   display: none;
 }
 
+.catTexto, .msnTexto {
+  font-weight: 500;
+}
+
+.catTexto {
+  display: none;
+}
+
+.nav {
+  position: absolute;
+  bottom: 1.5%;
+  left: 1.5%;
+  max-width: 80rem;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.nav:hover {
+  pointer-events: auto;
+}
+
+.sm-header {
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.line {
+  width: 8rem;
+  height: 1px;
+  background-color: #161616;
+  margin-left: 0.5rem;
+  transform: scaleX(0.4);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.nav:hover .line {
+  transform: scaleX(1);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-inline: 1rem;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s;
+}
+
+
+.nav-item:nth-child(odd) {
+  transform: translateY(5rem);
+}
+
+.nav-item:nth-child(even) {
+  transform: translateY(-5rem);
+}
+
+.nav:hover .nav-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-link {
+  font-size: 2rem;
+}
+
+
+
+/* Diseño Responsivo */
 @media screen and (max-width: 600px) {
   header {
     justify-content: center;
@@ -159,16 +236,22 @@ button:hover {
   }
   
   #contenedor {
-  top: 47%;
+  top: 49%;
     flex-direction: column;
   }
   
   #izquierda, #derecha {
     width: 100%;
+    height: 40%;
   }
   
   #izquierda {
     height: 60%;
+  }
+  
+  #derecha {
+    flex-direction: row;
+    gap: 0;
   }
   
   .vector {
@@ -178,5 +261,63 @@ button:hover {
   .vectorCat {
     display: block;
     width: 50%;
+  }
+  
+  .catTexto {
+    display: block;
+    animation: floatMiaw 5s ease infinite;
+    font-weight: bolder;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  @keyframes floatMiaw {
+    0% {
+      transform: translatey(-40px) translateX(-25px);
+    }
+    50% {
+      transform: translatey(-60px) translateX(-25px);
+    }
+    100% {
+      transform: translatey(-40px) translateX(-25px);
+    }
+  }
+  
+  
+  .msnTexto {
+    display: none;
+  }
+  
+  .nav {
+    left: 3%;
+    bottom: 1.5%;
+  }
+  
+  .sm-header {
+    font-size: 1.2rem;
+    cursor: default;
+  }
+  
+  .line {
+    width: 4.5rem;
+    transform: scaleX(1);
+    margin: 0 0.9rem;;
+  }
+  
+  .nav-item {
+    opacity: 1;
+    margin-inline: 0.6rem;
+  }
+  
+  .nav-item.nav-item:nth-child(odd) {
+    transform: translateY(0);
+  }
+  
+  .nav-item.nav-item:nth-child(even) {
+    transform: translateY(0);
+  }
+  
+  .nav-link {
+    font-size: 1.6rem;
   }
 }
