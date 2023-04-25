@@ -131,6 +131,11 @@ button:hover {
   animation: float 5s ease infinite;
 }
 
+.msnTexto {
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
 @keyframes float {
 	0% {
 		transform: translatey(0px);
@@ -153,6 +158,75 @@ button:hover {
 
 .catTexto {
   display: none;
+}
+
+.resultadoOculto {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 95%;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}
+
+.resultado {
+  display: flex;
+  gap: 5%;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 60%;
+  width: 95%;
+}
+
+.resultado h2 {
+  cursor: default;
+  color: #161616;
+  letter-spacing: 2px;
+}
+
+.fa-heart {
+  font-size: 2em;
+  color: #161616;
+}
+
+.showResult {
+  height: 75%;
+  width: 100%;
+  color: #161616;
+  letter-spacing: 2px;
+  background-color: rgba(290, 290, 290, 0.29);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  padding: 2%;
+}
+
+.copia {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  align-content: center;
+  gap: 15%;
+}
+
+.info {
+  text-align: left;
+  cursor: default;
+}
+
+.info p {
+  font-weight: 300;
+  color: #161616;
+  font-size: 0.8em;
+}
+
+.info i {
+  font-size: 0.9em;
+  color: #161616;
+  margin-right: 2px;
 }
 
 .nav {

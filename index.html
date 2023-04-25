@@ -30,10 +30,25 @@
     </section>
     
     <section id="derecha">
-      <img src="img/icon.svg" alt="" class="vector">
-      <img src="img/cat.svg" alt="" class="vectorCat">
-      <p class="msnTexto">¡Hey, Mandame un mensaje!</p>
+      <img style="display: none" src="img/icon.svg" alt="" class="vector">
+      <img style="display: none" src="img/cat.svg" alt="" class="vectorCat">
+      <p style="display: none" class="msnTexto">¡Hey, mándame un mensaje!</p>
       <p class="catTexto">¡Miaw! Esperando tu mensaje</p>
+      <div class="resultadoOculto">
+        <div class="resultado">
+          <i class="fa-solid fa-heart fa-flip"></i>
+          <h2>¡Muy bien! Tu mensaje es:</h2>
+          <p class="showResult" id="showResult">Prueba</p>
+        </div>
+        <div class="copia">
+          <div class="info">
+            <p><i class="fa-solid fa-arrow-right"></i> Copia el resultado en el campo de texto para desencriptar o volver a encriptar.</p>
+          </div>
+          <div class="boton">
+            <button id="btn-c" value="Encriptar"><i class="fa-regular fa-clipboard"></i> Copiar</button>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
