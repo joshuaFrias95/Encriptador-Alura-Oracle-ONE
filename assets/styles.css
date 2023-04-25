@@ -362,6 +362,49 @@ button:hover {
     display: none;
   }
   
+  .resultadoOculto {
+    flex-direction: row;
+  }
+  
+  .resultado {
+    width: 55%;
+    height: 100%;
+  }
+  
+  .resultado h2 {
+    font-size: 1em;
+  }
+  
+  .fa-heart {
+    font-size: 1em;
+    padding-top: 2%;
+  }
+  
+  .showResult {
+    background: transparent;
+  }
+  
+  .copia {
+    width: 45%;
+    height: 100%;
+  }
+  
+  .info {
+    display: none;
+  }
+  
+  .boton {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .boton button {
+    transform: scale(1.2)
+  }
+  
   .nav {
     left: 3%;
     bottom: 1.5%;
