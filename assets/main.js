@@ -1,17 +1,47 @@
 // Lógica de encriptación y desencriptación
 
 // Botones
+// const btnE = document.getElementById('btn-e');
+const btnE = document.getElementById('btn-e');
+const btnD = document.getElementById('btn-d');
 const btnC = document.getElementById('btn-c');
 
 // Áreas de texto
+const textArea = document.querySelector('textarea');
 const result = document.getElementById('showResult');
+const resultadoOculto = document.getElementById('resultadoOculto');
+const vector = document.getElementById('vector');
+const vectorGato = document.getElementById('vectorCat');
+const msnTexto = document.getElementById('msnTexto');
+const catTexto = document.getElementById('catTexto');
+
 
 // Cuadro de Notificación
 const toast = document.querySelector('.toast');
-(closeIcon = document.querySelector('.close')),
-(progress = document.querySelector('.progress'));
+let closeIcon = document.querySelector('.close');
+let progress = document.querySelector('.progress');
+
+// Llaves de encriptación y desencriptación
+let encripta = {
+  'a': 'ai',
+  'e': 'enter',
+  'i': 'imes',
+  'o': 'ober',
+  'u': 'ufai'
+}
+
+let codigos = {
+  'ai': 'a',
+  'enter': 'e',
+  'imes': 'i',
+  'ober': 'o',
+  'ufai': 'u'
+}
+
+textArea.value= "";
 
 
+// Notificación de copiado
 function notification() {
   
   let timer1, timer2;
@@ -22,11 +52,11 @@ function notification() {
     
     timer1 = setTimeout(() => {
       toast.classList.remove("active");
-    }, 5000);
+    }, "5000");
     
     timer2 = setTimeout(() => {
       progress.classList.remove("active");
-    }, 5300);
+    }, "5300");
   });
   
   closeIcon.addEventListener("click", () => {
@@ -34,11 +64,54 @@ function notification() {
     
     setTimeout(() => {
       progress.classList.remove("active");
-    }, 200);
+    }, "200");
     
     clearTimeout(timer1);
     clearTimeout(timer2);
   })
+}
+
+function alerta(accion) {
+  alert("¡Alto ahí!, aún no hay nada por " + accion + ". Recuerda ingresar un texto.")
+}
+
+function mostrar(texto) {
+  result.innerHTML = texto;
+}
+
+function encriptar() {
+  let texto = textArea.value.toLowerCase();
+  textArea.value = "";
+  
+  if (texto.length == 0) {
+    alerta("encriptar")
+  } else {
+  
+    texto = texto.replace(/a|e|i|o|u/g, function(matched) {
+      return encripta[matched]
+    });
+  
+    mostrar(texto);
+    mostrarOcultar();
+  }
+ 
+}
+
+function desencriptar() {
+  let texto = textArea.value.toLowerCase();
+  textArea.value = "";
+  if (texto.length == 0) {
+    alerta("desencriptar")
+  } else {
+    texto = texto.replace(/ai|enter|imes|ober|ufai/g, function(matched) {
+      return codigos[matched]
+    });
+    
+    mostrar(texto);
+    mostrarOcultar();
+  }
+  
+  
 }
 
 
@@ -47,88 +120,20 @@ function clipboard() {
   navigator.clipboard.writeText(result.innerHTML);
 }
 
-btnC.addEventListener("click", clipboard);
-// const textArea = document.querySelector('textarea');
-// const btnC = document.getElementById('btn-c'); 
-// const btnE = document.getElementById('btn-e');
-// const btnD = document.getElementById('btn-d');
-// const result = document.getElementById('showResult');
 
-// let encripta = {
-//   'a': 'ai',
-//   'e': 'enter',
-//   'i': 'imes',
-//   'o': 'ober',
-//   'u': 'ufai'
-// }
-
-// let codigos= {
-//   'ai': 'a',
-//   'enter': 'e',
-//   'imes': 'i',
-//   'ober': 'o',
-//   'ufai': 'u'
-// }; 
+function mostrarOcultar() {
+  resultadoOculto.classList.remove('oculto');
+  vector.classList.add('oculto');
+  vectorGato.classList.add('oculto');
+  msnTexto.classList.add('oculto');
+  catTexto.classList.add('oculto');
+}
 
 
-// textArea.value= "";
-// textArea.focus();
 
-// function cambiarClase() {
-//   //oculta 
-//   document.getElementById('doll').classList.add('oculto');
-//   document.getElementById('titulo').classList.add('oculto');
-//   //Muestra
-//   document.getElementById('corazon').classList.remove('oculto');
-//   document.getElementById('titulo2').classList.remove('oculto');
-//   result.classList.remove('oculto');
-//   result.classList.add('ajuste');
-//   btnC.classList.remove('oculto');
-//   btnC.classList.add('show');
-  
-// }
-
-// function mostrar(texto) {
-//   result.innerHTML = texto;
-  
-// }
-
-// function encriptar() {
-//   let texto = textArea.value.toLocaleLowerCase();
-//   textArea.value = "";
-  
-//   texto = texto.replace(/a|e|i|o|u/g, function(matched) {
-//     return encripta[matched]
-//   });
-  
-//   cambiarClase();
-//   mostrar(texto);
-// }
-
-// function desencriptar() {
-//   let texto = textArea.value.toLocaleLowerCase();
-//   textArea.value = "";
-  
-//   texto = texto.replace(/ai|enter|imes|ober|ufai/g, function(matched) {
-//     return codigos[matched]
-//   });
-  
-//   cambiarClase();
-//   mostrar(texto);
-// }
-
-// function copiar() {
-//   navigator.clipboard.writeText(result.innerHTML);
-// }
-
-
-// btnE.onclick = encriptar;
-// btnD.onclick = desencriptar;
-// btnC.onclick = copiar;
-
-const btnE = document.getElementById('btn-e');
-const btnD = document.getElementById('btn-d');
-
+btnC.onclick = clipboard;
+btnE.onclick = encriptar;
+btnD.onclick = desencriptar;
 
 
 // Fondo 

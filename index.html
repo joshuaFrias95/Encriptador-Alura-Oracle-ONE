@@ -22,6 +22,7 @@
     <section id="izquierda">
 			<div class="izquierda-contenido">
 				<textarea placeholder="Ingresa el texto que quieras encriptar o desencriptar" required></textarea>
+				<p><i class="fa-solid fa-arrow-right"></i> Este programa solo admite caracteres alfabéticos en mayúsculas o minúsculas.</p>
 				<div class="mainbttns">
 					<button id="btn-d"><i class="fa-solid fa-unlock"></i> Desencriptar</button>
 					<button id="btn-e"><i class="fa-solid fa-lock"></i> Encriptar</button>
@@ -30,15 +31,15 @@
     </section>
     
     <section id="derecha">
-      <img style="display: none" src="img/icon.svg" alt="" class="vector">
-      <img style="display: none" src="img/cat.svg" alt="" class="vectorCat">
-      <p style="display: none" class="msnTexto">¡Hey, mándame un mensaje!</p>
-      <p style="display: none" class="catTexto">¡Miaw! Esperando tu mensaje</p>
-      <div class="resultadoOculto">
+      <img src="img/icon.svg" alt="" id ="vector" class="vector">
+      <img src="img/cat.svg" alt="" id="vectorCat" class="vectorCat">
+      <p id="msnTexto" class="msnTexto">¡Hey, mándame un mensaje!</p>
+      <p id="catTexto" class="catTexto">¡Miaw! Esperando tu mensaje</p>
+      <div class="resultadoOculto oculto" id="resultadoOculto">
         <div class="resultado">
           <i class="fa-solid fa-heart fa-flip"></i>
           <h2>¡Muy bien! Tu mensaje es:</h2>
-          <p class="showResult" id="showResult">Prueba</p>
+          <p class="showResult" id="showResult"></p>
         </div>
         <div class="copia">
           <div class="info">
