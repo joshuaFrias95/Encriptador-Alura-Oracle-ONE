@@ -13,6 +13,8 @@ function copiar() {
   let timer1, timer2;
   
   btnC.addEventListener("click", () => {
+    // Aprovecha el evento click para llamar la función clipboard()
+    clipboard();
     toast.classList.add("active");
     progress.classList.add("active");
     
@@ -24,7 +26,6 @@ function copiar() {
       progress.classList.remove("active");
     }, 5300);
     
-    clipboard();
   });
   
   closeIcon.addEventListener("click", () => {
@@ -47,10 +48,6 @@ function clipboard() {
 }
 
 
-// function botonCopiar() {
-//   clipboard();
-//   notification();
-// }
 // Áreas de texto
 const textArea = document.querySelector('textarea');
 const result = document.getElementById('showResult');
@@ -78,6 +75,7 @@ let codigos = {
   'ufai': 'u'
 }
 
+
 textArea.value= "";
 
 // Alerta de campo de texto vacío
@@ -93,36 +91,48 @@ function mostrar(texto) {
 
 
 function encriptar() {
+  // Para mayor comodidad permitimos caracteres en mayúscula que posteriormente transformamos en minúscula
   let texto = textArea.value.toLowerCase();
   textArea.value = "";
   
+  // Validamos que el área de texto no esté vacío
   if (texto.length == 0) {
     alerta("encriptar")
   } else {
-  
-    texto = texto.replace(/a|e|i|o|u/g, function(matched) {
-      return encripta[matched]
-    });
-  
-    mostrar(texto);
-    mostrarOcultar();
+    
+    // Validación de caracteres con una expresión regular
+    let condicion = /^[a-z\s]+$/;
+    
+    if (texto.match(condicion)) {
+      texto = texto.replace(/a|e|i|o|u/g, function(matched) {
+        return encripta[matched]
+      });
+     mostrar(texto);
+     mostrarOcultar();
+    
+    } else {
+      alert("Este programa no acepta números o acentos. ¿Lo intentamos de nuevo?")
+    } 
   }
  
 }
 
 
+
 function desencriptar() {
   let texto = textArea.value.toLowerCase();
+  
   textArea.value = "";
+  
   if (texto.length == 0) {
     alerta("desencriptar")
   } else {
-    texto = texto.replace(/ai|enter|imes|ober|ufai/g, function(matched) {
-      return codigos[matched]
-    });
-    
-    mostrar(texto);
-    mostrarOcultar();
+  
+     texto = texto.replace(/ai|enter|imes|ober|ufai/g, function(matched) {
+       return codigos[matched]
+     });
+        mostrar(texto);
+     mostrarOcultar();
   }
   
   
