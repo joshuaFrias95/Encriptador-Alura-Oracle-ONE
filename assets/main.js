@@ -1,11 +1,56 @@
 // Lógica de encriptación y desencriptación
 
 // Botones
-// const btnE = document.getElementById('btn-e');
 const btnE = document.getElementById('btn-e');
 const btnD = document.getElementById('btn-d');
-const btnC = document.getElementById('btn-c');
+const btnC = document.getElementById('btn-c'),
+  toast = document.querySelector(".toast");
+  (closeIcon = document.querySelector(".close")),
+    (progress = document.querySelector(".progress"));
 
+// Notificación de copiado
+function copiar() {
+  let timer1, timer2;
+  
+  btnC.addEventListener("click", () => {
+    toast.classList.add("active");
+    progress.classList.add("active");
+    
+    timer1 = setTimeout(() => {
+      toast.classList.remove("active");
+    }, 5000);
+    
+    timer2 = setTimeout(() => {
+      progress.classList.remove("active");
+    }, 5300);
+    
+    clipboard();
+  });
+  
+  closeIcon.addEventListener("click", () => {
+    toast.classList.remove("active");
+    
+    setTimeout(() => {
+      progress.classList.remove("active");
+    }, 300);
+    
+    clearTimeout(timer1);
+    clearTimeout(timer2);
+  })
+}
+
+
+// Función copiar al portapapeles
+function clipboard() {
+  
+  navigator.clipboard.writeText(result.innerHTML);
+}
+
+
+// function botonCopiar() {
+//   clipboard();
+//   notification();
+// }
 // Áreas de texto
 const textArea = document.querySelector('textarea');
 const result = document.getElementById('showResult');
@@ -15,11 +60,6 @@ const vectorGato = document.getElementById('vectorCat');
 const msnTexto = document.getElementById('msnTexto');
 const catTexto = document.getElementById('catTexto');
 
-
-// Cuadro de Notificación
-const toast = document.querySelector('.toast');
-let closeIcon = document.querySelector('.close');
-let progress = document.querySelector('.progress');
 
 // Llaves de encriptación y desencriptación
 let encripta = {
@@ -40,44 +80,17 @@ let codigos = {
 
 textArea.value= "";
 
-
-// Notificación de copiado
-function notification() {
-  
-  let timer1, timer2;
-  
-  btnC.addEventListener("click", () => {
-    toast.classList.add("active");
-    progress.classList.add("active");
-    
-    timer1 = setTimeout(() => {
-      toast.classList.remove("active");
-    }, "5000");
-    
-    timer2 = setTimeout(() => {
-      progress.classList.remove("active");
-    }, "5300");
-  });
-  
-  closeIcon.addEventListener("click", () => {
-    toast.classList.remove("active");
-    
-    setTimeout(() => {
-      progress.classList.remove("active");
-    }, "200");
-    
-    clearTimeout(timer1);
-    clearTimeout(timer2);
-  })
-}
-
+// Alerta de campo de texto vacío
 function alerta(accion) {
   alert("¡Alto ahí!, aún no hay nada por " + accion + ". Recuerda ingresar un texto.")
 }
 
+
+// Imprimir resultado en etiqueta <p>
 function mostrar(texto) {
   result.innerHTML = texto;
 }
+
 
 function encriptar() {
   let texto = textArea.value.toLowerCase();
@@ -97,6 +110,7 @@ function encriptar() {
  
 }
 
+
 function desencriptar() {
   let texto = textArea.value.toLowerCase();
   textArea.value = "";
@@ -115,12 +129,8 @@ function desencriptar() {
 }
 
 
-function clipboard() {
-  notification();
-  navigator.clipboard.writeText(result.innerHTML);
-}
 
-
+// Cambio de clases en tarjeta derecha
 function mostrarOcultar() {
   resultadoOculto.classList.remove('oculto');
   vector.classList.add('oculto');
@@ -130,10 +140,12 @@ function mostrarOcultar() {
 }
 
 
-
-btnC.onclick = clipboard;
+// Acciones de botones
+btnC.onclick = copiar();
 btnE.onclick = encriptar;
 btnD.onclick = desencriptar;
+
+
 
 
 // Fondo 
