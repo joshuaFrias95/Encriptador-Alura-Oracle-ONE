@@ -633,7 +633,7 @@ button:hover {
 @media screen and (max-width: 450px) {
   
   header {
-    top: 4%;
+    top: 2.1%;
   }
   
   #contenedor {
@@ -664,7 +664,7 @@ button:hover {
   }
   
   .vectorCat {
-    width: 70%;
+    width: 100%;
   }
   
   .resultadoOculto {
@@ -675,6 +675,10 @@ button:hover {
   
   .resultado {
     width: 100%;
+  }
+  
+  .nav {
+    bottom: 1%;
   }
   
   .sm-header {
