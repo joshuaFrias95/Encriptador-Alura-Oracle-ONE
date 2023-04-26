@@ -27,7 +27,7 @@ a:visited {
   z-index: -1;
 }
 
-body {
+body, html {
   overflow: hidden;
 }
 
@@ -143,6 +143,7 @@ button:hover {
 .msnTexto {
   font-weight: bolder;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 @keyframes float {
@@ -406,7 +407,67 @@ button:hover {
 
 
 /* Diseño Responsivo */
-@media screen and (max-width: 600px) {
+
+@media screen and (min-width: 701px ) and (max-width: 820px) {
+  #contenedor {
+    top: 45%;
+    flex-direction: column;
+    align-items: center;
+    gap: 3%;
+  }
+  
+  #izquierda, #derecha {
+    width: 85%;
+  }
+  
+  #izquierda {
+    height: 55%;
+  }
+  
+  #derecha {
+    height: 45%;
+    gap: 0;
+    flex-direction: row;
+  }
+  
+  .vector {
+    width: 40%;
+  }
+  
+  .nav {
+    bottom: 3%;
+  }
+  
+  .sm-header {
+    font-size: 1.2rem;
+    cursor: default;
+  }
+  
+  .line {
+    width: 4.5rem;
+    transform: scaleX(1);
+    margin: 0 0.9rem;;
+  }
+  
+  .nav-item {
+    opacity: 1;
+    margin-inline: 0.6rem;
+  }
+  
+  .nav-item.nav-item:nth-child(odd) {
+    transform: translateY(0);
+  }
+  
+  .nav-item.nav-item:nth-child(even) {
+    transform: translateY(0);
+  }
+  
+  .nav-link {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
   header {
     justify-content: center;
   }
