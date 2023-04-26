@@ -1,51 +1,85 @@
 
-# Encriptador-Alura-Oracle-ONE
+# Encriptador-Alura-Oracle-ONE V'3.1 
+
+![Logo Alura](https://raw.githubusercontent.com/joshuaFrias95/Encriptador-Alura-Oracle-ONE/main/img/readme/aluraoracle.png)
+
+Challenge #1 del programa del el programa [Oracle Next Education](https://www.oracle.com/mx/education/oracle-next-education/) en conjunto con [Alura Latam](https://www.aluracursos.com/).
 
 
-Challenge #1 del programa ONE de [Alura Latam](https://www.aluracursos.com/) y el programa [Oracle Next Education](https://www.oracle.com/mx/education/oracle-next-education/).
+![insignia](https://raw.githubusercontent.com/joshuaFrias95/Encriptador-Alura-Oracle-ONE/main/img/readme/insigniaAlura.png)
 
-Programa que permite encriptar y desencriptar un texto específico, además de permitir copiarlo al portapapeles que contaba ya con una propuesta de diseño.
+[![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/)
+[![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/)
+[![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/)
+[![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=git&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/)
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/)
 
-![](/img/readme/dise%C3%B1ooriginalenctriptador.png)
+## Funcionamiento
 
-El diseño original proponía un área a la izquierda en donde el usuario pudiera agregar un texto cualquiera para que a su derecha.
+El programa permite ingresar una cadena de texto o mensaje al cuál se reemplazan sus vocales según el siguiente patrón y viceversa:
+
+```
+  'a': 'ai',
+  'e': 'enter',
+  'i': 'imes',
+  'o': 'ober',
+  'u': 'ufai'
+
+```
+
+También utiliza una función `Regexp` que filtra los caracteres especiales o mayúsculas.
+
 
 ![](/img/readme/dise%C3%B1ooriginalencriptadorresult.png)
 
-## Optimizaciones
-
-- v1: Primer maquetado y testeo en HTML y HTML del encriptador.
-
-![](/img/readme/encriptadorv1.png)
+## 🛠 Optimizaciones
 
 
+<img width="100%" src="https://media.giphy.com/media/ASlOH7v8ZbimO40nm1/giphy.gif">
+<br>
+<br>
+<p style="font-size: 30px;">¡Lo logramos! Concluimos la V'3</p>
 
-- v1.1: Optimización del código tanto en html como en HTML, adición de animaciones realizadas con keyframes de CSS y la librería [**Typed.js**](https://github.com/mattboldt/typed.js/) de [@mattboldt](https://github.com/mattboldt), además del primer testeo de funciones para cada botón.
+Algunos features que se agregaron a la versión final:
 
+- Diseño responsivo para escritorio, tablet o móvil
 
-- v2: Tras orientación por parte del equipo de [Alura Latam](https://www.aluracursos.com/), decidí simplificar el fichero html a tres secciones primordiales, además, tras analizar el primer maquetado noté que podría ocupar más el espacio en pantalla y jugar con los elementos de una mejor manera, además de eliminar elementos innecesarios como el toggle de modo oscuro. Mi objetivo principal fue darle dinamismo y un mayor sentido lúdico a los dos elementos principales: las áreas de entrada y salida de texto.
+![](https://raw.githubusercontent.com/joshuaFrias95/Encriptador-Alura-Oracle-ONE/main/img/readme/encriptador%20Desktop.png)
+![](https://raw.githubusercontent.com/joshuaFrias95/Encriptador-Alura-Oracle-ONE/main/img/readme/tablet.png)
+![](https://raw.githubusercontent.com/joshuaFrias95/Encriptador-Alura-Oracle-ONE/main/img/readme/movil.png)
 
-![](/readme/2023-04-16-00-10-43.gif)
-
-
-
-## Insignia de Challenge completado
-
-![](/readme/insignia.png)
-
-
-
-## 🛠 Lenguajes
-![html](https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png) ![css](https://blastcoding.com/wp-content/uploads/2018/10/CSS3.png) ![js](https://www.shareicon.net/data/256x256/2016/07/06/106573_software_512x512.png)
+- Fondo animado responsivo dentro de la etiqueta `<canvas>`
+- Notificación modal de copiado
 
 
+## Colaborar
+
+¿Te interesa colaborar? Sientete en la libertad de hacerlo poniendo los siguientes prefijos seguidos de su localización y de tu commit:
+
+  - `Fix`: Optimización de algún fragmento de código
+  - `Bug`: Corrección de algún error
+  - `Add-on`: Adición de features.
+  
+  Prefijos de localización:
+
+  - `Script`: Fichero JS
+  - `Style`: Fichero CSS
+  - `index`: Fichero HTML.
+  
+  EJEMPLO:
+  
+  `Add-on Script: Agrego función toggle para modo oscuro`
+  
+  ![](https://media.giphy.com/media/TCBJw2ZLdeOg2bDyLh/giphy.gif)
 
 ## Authors
 
 - [@joshuaFrias95](https://github.com/joshuaFrias95/)
 
-## 🔗 Links
+
 [![behance](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](about:blank)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joshua-fr%C3%ADas/)
+
+![](https://media.giphy.com/media/KzJkzjggfGN5Py6nkT/giphy.gif)
 
 
