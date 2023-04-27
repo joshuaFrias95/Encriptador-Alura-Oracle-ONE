@@ -20,7 +20,7 @@ El programa permite ingresar una cadena de texto o mensaje al cuál se reemplaza
   'e': 'enter',
   'i': 'imes',
   'o': 'ober',
-  'u': 'ufai'
+  'u': 'ufat'
 
 ```
 También es posible desencriptar el mismo mensaje y copiarlo al portapapeles del navegador.

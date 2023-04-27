@@ -64,7 +64,7 @@ let encripta = {
   'e': 'enter',
   'i': 'imes',
   'o': 'ober',
-  'u': 'ufai'
+  'u': 'ufat'
 }
 
 let codigos = {
@@ -72,7 +72,7 @@ let codigos = {
   'enter': 'e',
   'imes': 'i',
   'ober': 'o',
-  'ufai': 'u'
+  'ufat': 'u'
 }
 
 
@@ -128,7 +128,7 @@ function desencriptar() {
     alerta("desencriptar")
   } else {
   
-     texto = texto.replace(/ai|enter|imes|ober|ufai/g, function(matched) {
+     texto = texto.replace(/ai|enter|imes|ober|ufat/g, function(matched) {
        return codigos[matched]
      });
         mostrar(texto);
