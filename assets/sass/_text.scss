@@ -20,8 +20,10 @@ header {
     }
 }
 
-.catTexto .msnTexto {
-    font-weight: 500;
+.msnTexto {
+    font-weight: bolder;
+    letter-spacing: $l-spacing;
+    font-size: 1.3em;
 }
 
 .catTexto {

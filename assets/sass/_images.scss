@@ -11,10 +11,8 @@ header {
 
 .vector {
     width: 75%;
-    animation: float 5s ease infinite;
 }
 
-@include floatAnim;
 
 .vectorCat {
     display: none;
