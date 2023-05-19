@@ -63,6 +63,14 @@
     }
 }
 
+@mixin progressAnim {
+    @keyframes progress {
+        100% {
+            right: 100%;
+        }
+    }
+}
+
 @mixin infoTexts {
     font-weight: 300;
     color: $black;

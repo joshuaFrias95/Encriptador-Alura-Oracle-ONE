@@ -1,5 +1,8 @@
 @import 'variables';
 
+/* ------- */
+/* Textos */
+/* ------- */
 header {
     span {
         letter-spacing: 2px;
@@ -46,5 +49,31 @@ header {
         font-size: 0.9em;
         color: $black;
         margin-right: 2px;
+    }
+}
+
+.sm-header {
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.nav-item {
+    margin-inline: 1rem;
+    opacity: 0;
+    transition: transform $fives, opacity $fives;
+
+    &:nth-child(odd) {
+        transform: translateY(5rem);
+    }
+
+    &:nth-child(even) {
+        transform: translateY(-5rem);
+    }
+
+    .nav-link {
+        font-size: 2rem;
     }
 }

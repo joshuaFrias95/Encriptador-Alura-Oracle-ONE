@@ -1,5 +1,9 @@
 @import 'mixins';
 
+/* ------------ */
+/* Contenedores */
+/* ------------ */
+
 #canv {
     width: 100%;
     height: 100vh;
@@ -98,4 +102,36 @@ header {
     position: absolute;
     bottom: 1.5%;
     left: 1.5%;
+    max-width: 80rem;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+
+    &:hover {
+        pointer-events: auto;
+    }
+
+    &:hover .line {
+        transform: scaleX(1);
+    }
+
+    &:hover .nav-item {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.line {
+    width: 8rem;
+    height: 1px;
+    background-color: $black;
+    margin-left: 0.5rem;
+    transform: scaleX(0.4);
+    transform-origin: left;
+    transition: transform $fives;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
 }

@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&family=Vina+Sans&display=swap");
+/* ------- */
+/* General */
+/* ------- */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +14,9 @@ a:link, a:visited {
 .oculto {
   display: none !important; }
 
+/* ------------ */
+/* Contenedores */
+/* ------------ */
 #canv {
   width: 100%;
   height: 100vh;
@@ -115,8 +121,35 @@ header {
 .nav {
   position: absolute;
   bottom: 1.5%;
-  left: 1.5%; }
+  left: 1.5%;
+  max-width: 80rem;
+  display: flex;
+  align-items: center;
+  pointer-events: none; }
+  .nav:hover {
+    pointer-events: auto; }
+  .nav:hover .line {
+    transform: scaleX(1); }
+  .nav:hover .nav-item {
+    opacity: 1;
+    transform: translateY(0); }
 
+.line {
+  width: 8rem;
+  height: 1px;
+  background-color: #161616;
+  margin-left: 0.5rem;
+  transform: scaleX(0.4);
+  transform-origin: left;
+  transition: transform 0.5s ease; }
+
+.nav-list {
+  display: flex;
+  list-style: none; }
+
+/* -------- */
+/* Imagenes */
+/* -------- */
 header img {
   width: 2%; }
 
@@ -134,6 +167,9 @@ header img {
 .vectorCat {
   display: none; }
 
+/* ------- */
+/* Textos */
+/* ------- */
 header span {
   letter-spacing: 2px;
   font-style: italic;
@@ -170,6 +206,27 @@ header span {
   color: #161616;
   margin-right: 2px; }
 
+.sm-header {
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  cursor: pointer;
+  pointer-events: auto; }
+
+.nav-item {
+  margin-inline: 1rem;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease; }
+  .nav-item:nth-child(odd) {
+    transform: translateY(5rem); }
+  .nav-item:nth-child(even) {
+    transform: translateY(-5rem); }
+  .nav-item .nav-link {
+    font-size: 2rem; }
+
+/* -------- */
+/* textarea */
+/* -------- */
 textarea {
   width: 100%;
   height: 75%;
@@ -182,6 +239,9 @@ textarea {
   textarea:focus {
     outline: none; }
 
+/* -------- */
+/* Botones */
+/* ------- */
 button {
   cursor: pointer;
   border-radius: 25px;
@@ -197,5 +257,83 @@ button {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24), 0 1px 3px 2px rgba(0, 0, 0, 0.24); }
   button:hover {
     transform: scale(1.1); }
+
+/* ------ */
+/* TOAST */
+/* ----- */
+.toast {
+  display: none;
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  border-radius: 12px;
+  background-color: rgba(209, 172, 0, 0.6);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  padding: 1.5% 3%;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: translateX(calc(100% + 3px));
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35); }
+  .toast .active {
+    display: block;
+    transform: translateX(0%); }
+    .toast .active:before {
+      animation: progress 5s linear forwards; }
+    .toast .active .active ~ button {
+      pointer-events: none; }
+  .toast .toast-content {
+    display: flex;
+    align-items: center; }
+  .toast .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    min-width: 35px;
+    font-size: 20px;
+    background-color: rgba(16, 16, 16, 0.7);
+    color: #e6e6e6;
+    border-radius: 50%; }
+  .toast .message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px; }
+    .toast .message .text {
+      font-size: 16px;
+      font-weight: 400;
+      color: #161616;
+      cursor: default; }
+      .toast .message .text .text-1 {
+        font-weight: 600; }
+      .toast .message .text .text-2 {
+        font-weight: 200; }
+  .toast .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    opacity: 0.7;
+    cursor: pointer; }
+    .toast .close:hover {
+      opacity: 1; }
+  .toast .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%; }
+    .toast .progress:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #161616; }
+
+@keyframes progress {
+  100% {
+    right: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */
