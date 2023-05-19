@@ -1,8 +1,50 @@
 @import 'variables';
 
-header span {
-    letter-spacing: 2px;
-    font-style: italic;
-    font-weight: 200;
-    cursor: default;
+header {
+    span {
+        letter-spacing: 2px;
+        font-style: italic;
+        font-weight: 200;
+        cursor: default;
+    }
+}
+
+.izquierda-contenido {
+    p {
+        @include infoTexts;
+        margin-left: 2%;
+    }
+}
+
+.catTexto .msnTexto {
+    font-weight: 500;
+}
+
+.catTexto {
+    display: none;
+}
+
+.resultado {
+    h2 {
+        cursor: default;
+        color: $black;
+        letter-spacing: $l-spacing;
+    }
+}
+
+.fa-heart {
+    font-size: 2em;
+    color: $black;
+}
+
+.info {
+    p {
+        @include infoTexts;
+    }
+
+    i {
+        font-size: 0.9em;
+        color: $black;
+        margin-right: 2px;
+    }
 }

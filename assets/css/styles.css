@@ -8,6 +8,9 @@
 a:link, a:visited {
   color: #161616; }
 
+.oculto {
+  display: none !important; }
+
 #canv {
   width: 100%;
   height: 100vh;
@@ -66,14 +69,106 @@ header {
   padding: 1%;
   gap: 3%; }
 
+.mainbttns {
+  display: flex;
+  justify-content: space-evenly; }
+
+.resultadoOculto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  width: 95%;
+  height: 95%; }
+
+.resultado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5%;
+  width: 95%;
+  height: 60%; }
+
+.showResult {
+  width: 100%;
+  height: 75%;
+  color: #161616;
+  letter-spacing: 2px;
+  background-color: rgba(255, 255, 255, 0.29);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  padding: 2%; }
+
+.copia {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  align-content: center;
+  gap: 15%; }
+
+.info {
+  text-align: left;
+  cursor: default; }
+
+.nav {
+  position: absolute;
+  bottom: 1.5%;
+  left: 1.5%; }
+
 header img {
   width: 2%; }
+
+.vector {
+  width: 80%;
+  animation: float 5s ease infinite; }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-20px); }
+  100% {
+    transform: translateY(0px); } }
+.vectorCat {
+  display: none; }
 
 header span {
   letter-spacing: 2px;
   font-style: italic;
   font-weight: 200;
   cursor: default; }
+
+.izquierda-contenido p {
+  font-weight: 300;
+  color: #161616;
+  font-size: 0.8em;
+  margin-left: 2%; }
+
+.catTexto .msnTexto {
+  font-weight: 500; }
+
+.catTexto {
+  display: none; }
+
+.resultado h2 {
+  cursor: default;
+  color: #161616;
+  letter-spacing: 2px; }
+
+.fa-heart {
+  font-size: 2em;
+  color: #161616; }
+
+.info p {
+  font-weight: 300;
+  color: #161616;
+  font-size: 0.8em; }
+.info i {
+  font-size: 0.9em;
+  color: #161616;
+  margin-right: 2px; }
 
 textarea {
   width: 100%;
@@ -86,5 +181,21 @@ textarea {
   font-weight: bolder; }
   textarea:focus {
     outline: none; }
+
+button {
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  padding: 1.5% 2%;
+  font-weight: bolder;
+  transition: 0.2s ease;
+  letter-spacing: 2px;
+  color: #161616;
+  background-color: rgba(209, 172, 0, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24), 0 1px 3px 2px rgba(0, 0, 0, 0.24); }
+  button:hover {
+    transform: scale(1.1); }
 
 /*# sourceMappingURL=styles.css.map */

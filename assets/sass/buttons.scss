@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'mixins';
+
+button {
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    padding: 1.5% 2%;
+    font-weight: bolder;
+    transition: $twos;
+    letter-spacing: $l-spacing;
+    color: $black;
+    background-color: $bg-botones;
+    -webkit-backdrop-filter: $btn-blur;
+    backdrop-filter: $btn-blur;
+    box-shadow: $shadow-blur;
+
+    &:hover {
+        @include scale;
+    }
+}

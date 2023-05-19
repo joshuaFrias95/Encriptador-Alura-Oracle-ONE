@@ -1,3 +1,18 @@
-header img {
-    width: 2%;
+@import 'mixins';
+
+header {
+    img {
+        width: 2%;
+    }
+}
+
+.vector {
+    width: 80%;
+    animation: float 5s ease infinite;
+}
+
+@include floatAnim;
+
+.vectorCat {
+    display: none;
 }
