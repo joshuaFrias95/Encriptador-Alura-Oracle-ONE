@@ -1,9 +1,10 @@
-# Encriptador-Alura-Oracle-ONE V'3.1 
-[![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/)
-[![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/)
-[![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/)
-[![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=git&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/)
-[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&link=https://github.com/LuizCarlosAbbott/)](https://github.com/LuizCarlosAbbott/)
+# Encriptador-Alura-Oracle-ONE V'3.2
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+<br>
 
 Challenge #1 del programa del el programa [Oracle Next Education](https://www.oracle.com/mx/education/oracle-next-education/) en conjunto con [Alura Latam](https://www.aluracursos.com/) realizado con herramientas Front-end y diseño responsivo.
 
@@ -27,7 +28,7 @@ También es posible desencriptar el mismo mensaje y copiarlo al portapapeles del
 
 ![](/img/readme/dise%C3%B1ooriginalencriptadorresult.png)
 
-## 🛠 Optimizaciones || ¡Lo logramos! Concluimos la V'3
+## 🛠 ¡Lo logramos! Concluimos la V'3.2
 
 
 <img width="100%" src="https://media.giphy.com/media/ASlOH7v8ZbimO40nm1/giphy.gif">
