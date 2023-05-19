@@ -1,5 +1,7 @@
 @import 'variables';
 
+
+// FLEXBOX
 @mixin flex-spacebetween-center {
     display: flex;
     justify-content: space-between;
@@ -14,14 +16,6 @@
 @mixin flex-column {
     display: flex;
     flex-direction: column;
-}
-
-@mixin container-styles {
-    background-color: $bg-contenedores;
-    border-radius: 10px;
-    -webkit-backdrop-filter: $blur;
-    backdrop-filter: $blur;
-    box-shadow: $shadow-blur;
 }
 
 @mixin flex-center-column {
@@ -40,15 +34,29 @@
     align-items: center;
 }
 
+// CONTENEDORES
+@mixin container-styles {
+    background-color: $bg-contenedores;
+    border-radius: 10px;
+    -webkit-backdrop-filter: $blur;
+    backdrop-filter: $blur;
+    box-shadow: $shadow-blur;
+}
+
+
 @mixin fullScreen {
     width: 100%;
     height: 100%;
 }
 
+
+// ESCALA
 @mixin scale {
     transform: scale(1.1);
 }
 
+
+// KEYFRAMES
 @mixin floatAnim {
     @keyframes float {
         0% {
@@ -71,6 +79,8 @@
     }
 }
 
+
+// TEXTOS
 @mixin infoTexts {
     font-weight: 300;
     color: $black;
