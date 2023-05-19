@@ -1,0 +1,21 @@
+@import 'mixins';
+
+#canv {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+body, html {
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    width: 96%;
+    left: 50%;
+    top: 1.5%;
+    transform: translate(-50%);
+    @include flex-spacebetween-center;
+    padding: 1%;
+}
