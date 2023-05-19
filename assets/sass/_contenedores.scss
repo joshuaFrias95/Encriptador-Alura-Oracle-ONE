@@ -11,11 +11,42 @@ body, html {
 }
 
 header {
+    @include flex-spacebetween-center;
     position: absolute;
     width: 96%;
     left: 50%;
     top: 1.5%;
     transform: translate(-50%);
-    @include flex-spacebetween-center;
     padding: 1%;
+}
+
+#contenedor {
+    @include flex-row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 80%;
+    gap: 60px;
+}
+
+#izquierda {
+    @include container-styles;
+    width: 60%;
+}
+
+#derecha {
+    @include container-styles;
+    @include flex-center-column;
+    width: 40%;
+    gap: 5%;
+}
+
+.izquierda-contenido {
+    @include fullScreen;
+    @include flex-column;
+    padding: 1%;
+    gap: 3%;
+
 }

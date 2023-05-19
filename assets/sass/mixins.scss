@@ -3,3 +3,32 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin container-styles {
+    background-color: $bg-contenedores;
+    border-radius: 10px;
+    -webkit-backdrop-filter: $blur;
+    backdrop-filter: $blur;
+    box-shadow: $shadow-blur;
+}
+
+@mixin flex-center-column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin fullScreen {
+    width: 100%;
+    height: 100%;
+}
