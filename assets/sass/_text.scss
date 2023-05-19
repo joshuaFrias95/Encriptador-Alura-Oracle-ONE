@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 /* ------- */
 /* Textos */
@@ -32,6 +33,10 @@ header {
         cursor: default;
         color: $black;
         letter-spacing: $l-spacing;
+    }
+
+    .showResult {
+        text-align: center;
     }
 }
 
@@ -77,3 +82,5 @@ header {
         font-size: 2rem;
     }
 }
+
+@include tablet-only-text;

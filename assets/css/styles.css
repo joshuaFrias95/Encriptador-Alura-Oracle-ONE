@@ -32,7 +32,7 @@ header {
   position: absolute;
   width: 96%;
   left: 50%;
-  top: 1.5%;
+  top: 0;
   transform: translate(-50%);
   padding: 1%; }
 
@@ -64,6 +64,7 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   width: 40%;
   gap: 5%; }
 
@@ -111,12 +112,17 @@ header {
   display: flex;
   flex-direction: column;
   height: 25%;
+  justify-content: center;
   align-content: center;
   gap: 15%; }
 
 .info {
   text-align: left;
   cursor: default; }
+
+.boton {
+  display: flex;
+  justify-content: center; }
 
 .nav {
   position: absolute;
@@ -147,6 +153,27 @@ header {
   display: flex;
   list-style: none; }
 
+@media screen and (min-width: 701px) and (max-width: 820px) {
+  #contenedor {
+    top: 45%;
+    flex-direction: column;
+    align-items: center;
+    gap: 3%; }
+    #contenedor #izquierda {
+      width: 85%;
+      height: 55%; }
+    #contenedor #derecha {
+      width: 85%;
+      height: 45%; }
+
+  .nav {
+    bottom: 2.5%;
+    left: 9%;
+    z-index: 5; }
+    .nav .line {
+      width: 10rem;
+      transform: scaleX(1);
+      margin: 0 0.9rem; } }
 /* -------- */
 /* Imagenes */
 /* -------- */
@@ -154,7 +181,7 @@ header img {
   width: 2%; }
 
 .vector {
-  width: 80%;
+  width: 75%;
   animation: float 5s ease infinite; }
 
 @keyframes float {
@@ -167,6 +194,9 @@ header img {
 .vectorCat {
   display: none; }
 
+@media screen and (min-width: 701px) and (max-width: 820px) {
+  .vector {
+    width: 40%; } }
 /* ------- */
 /* Textos */
 /* ------- */
@@ -192,6 +222,8 @@ header span {
   cursor: default;
   color: #161616;
   letter-spacing: 2px; }
+.resultado .showResult {
+  text-align: center; }
 
 .fa-heart {
   font-size: 2em;
@@ -224,6 +256,21 @@ header span {
   .nav-item .nav-link {
     font-size: 2rem; }
 
+@media screen and (min-width: 701px) and (max-width: 820px) {
+  .sm-header {
+    font-size: 1.2rem;
+    cursor: default; }
+
+  .nav-item {
+    opacity: 1;
+    margin-inline: 0.6rem; }
+    .nav-item:nth-child(odd) {
+      transform: translateY(0); }
+    .nav-item:nth-child(even) {
+      transform: translateY(0); }
+
+  .nav-link {
+    font-size: 1.4rem; } }
 /* -------- */
 /* textarea */
 /* -------- */

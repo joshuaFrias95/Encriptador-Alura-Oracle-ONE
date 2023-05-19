@@ -19,7 +19,7 @@ header {
     position: absolute;
     width: 96%;
     left: 50%;
-    top: 1.5%;
+    top: 0;
     transform: translate(-50%);
     padding: 1%;
 }
@@ -43,6 +43,7 @@ header {
 #derecha {
     @include container-styles;
     @include flex-center-column;
+    justify-content: center;
     width: 40%;
     gap: 5%;
 }
@@ -89,6 +90,7 @@ header {
 .copia {
     @include flex-column;
     height: 25%;
+    justify-content: center;
     align-content: center;
     gap: 15%;
 }
@@ -96,6 +98,11 @@ header {
 .info {
     text-align: left;
     cursor: default;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
 }
 
 .nav {
@@ -135,3 +142,5 @@ header {
     display: flex;
     list-style: none;
 }
+
+@include tablet-only-containeres;

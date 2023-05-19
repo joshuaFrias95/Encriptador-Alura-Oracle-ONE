@@ -86,3 +86,73 @@
     color: $black;
     font-size: 0.8em;
 }
+
+
+// RESPONSIVE 
+@mixin tablet-only-containeres {
+    @media screen and (min-width: 701px) and (max-width: 820px) {
+        #contenedor {
+            top: 45%;
+            flex-direction: column;
+            align-items: center;
+            gap: 3%;
+
+            #izquierda {
+                width: 85%;
+                height: 55%;
+            }
+
+            #derecha {
+                width: 85%;
+                height: 45%;
+            }
+        }
+
+        .nav {
+            bottom: 2.5%;
+            left: 9%;
+            z-index: 5;
+
+            .line {
+                width: 10rem;
+                transform: scaleX(1);
+                margin: 0 0.9rem;
+            }
+        }
+    }
+
+}
+
+@mixin tablet-only-images {
+    @media screen and (min-width: 701px) and (max-width: 820px) {
+        .vector {
+            width: 40%;
+        }
+    }
+}
+
+@mixin tablet-only-text {
+    @media screen and (min-width: 701px) and (max-width: 820px) {
+        .sm-header {
+            font-size: 1.2rem;
+            cursor: default;
+        }
+
+        .nav-item {
+            opacity: 1;
+            margin-inline: 0.6rem;
+
+            &:nth-child(odd) {
+                transform: translateY(0);
+            }
+
+            &:nth-child(even) {
+                transform: translateY(0);
+            }
+        }
+
+        .nav-link {
+            font-size: 1.4rem;
+        }
+    }
+}

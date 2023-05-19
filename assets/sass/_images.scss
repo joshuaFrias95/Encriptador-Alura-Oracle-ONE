@@ -10,7 +10,7 @@ header {
 }
 
 .vector {
-    width: 80%;
+    width: 75%;
     animation: float 5s ease infinite;
 }
 
@@ -19,3 +19,5 @@ header {
 .vectorCat {
     display: none;
 }
+
+@include tablet-only-images;
